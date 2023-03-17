@@ -33,11 +33,11 @@ const ChangePassword = () => {
     }
 
     return (
-        <div className='flex justify-center items-center w-full h-full border' style={{backgroundImage: `url(${require('../../Assets/bg.png').default})`}}>
+        <div className='flex justify-center items-center w-full h-full border' style={{backgroundImage: `url("https://i.ibb.co/XzMdW3L/bg.png")`}}>
             <div>
                 <h1 className='text-2xl text-white'>Change your password</h1>
                 <input onChange={(e) => setchangePassword(e.target.value)} type="password" placeholder="Write a password" className="input input-bordered input-primary w-full max-w-xs my-5" /> <br />
-                <button onClick={handelChangePass} className='btn btn-primary'>Submit</button>
+                <button onClick={handelChangePass} className='btn btn-primary'>Sujhbmit</button>
             </div>
         </div>
     );

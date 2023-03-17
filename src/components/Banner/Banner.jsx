@@ -11,8 +11,10 @@ import "./Banner.css";
 import { Pagination, Autoplay } from "swiper";
 
 import Flip from "react-reveal/Flip";
+import { useNavigate } from "react-router-dom";
 
 const Banner = () => {
+  const navigate = useNavigate();
   return (
     <div className="mt-0 banner">
       <Swiper
@@ -42,7 +44,7 @@ const Banner = () => {
               <div className="container mt-5">
                 <div className="button-container">
                   <span className="mask">Buy Now</span>
-                  <button className="" type="button" name="Hover">
+                  <button className="" type="button" onClick={()=>{navigate("/ups")}} name="Hover">
                     Buy Now
                   </button>
                 </div>
@@ -61,7 +63,7 @@ const Banner = () => {
               <div className="container mt-5">
                 <div className="button-container">
                   <span className="mask">Buy Now</span>
-                  <button type="button" name="Hover">
+                  <button type="button" onClick={()=>{navigate("/computer")}} name="Hover">
                     Buy Now
                   </button>
                 </div>
@@ -80,7 +82,7 @@ const Banner = () => {
               <div className="container mt-5">
                 <div className="button-container">
                   <span className="mask">Buy Now</span>
-                  <button type="button" name="Hover">
+                  <button type="button" onClick={()=>{navigate("/surveillance")}} name="Hover">
                     Buy Now
                   </button>
                 </div>
@@ -99,7 +101,7 @@ const Banner = () => {
               <div className="container mt-5">
                 <div className="button-container">
                   <span className="mask">Buy Now</span>
-                  <button type="button" name="Hover">
+                  <button type="button" onClick={()=>{navigate("/accesories")}} name="Hover">
                     Buy Now
                   </button>
                 </div>
@@ -118,7 +120,7 @@ const Banner = () => {
               <div className="container mt-5">
                 <div className="button-container">
                   <span className="mask">Buy Now</span>
-                  <button type="button" name="Hover">
+                  <button type="button" onClick={()=>{navigate("/printer")}} name="Hover">
                     Buy Now
                   </button>
                 </div>
@@ -138,7 +140,7 @@ const Banner = () => {
               <div className="container mt-5">
                 <div className="button-container">
                   <span className="mask">Buy Now</span>
-                  <button type="button" name="Hover">
+                  <button type="button" onClick={()=>{navigate("/ups")}} name="Hover">
                     Buy Now
                   </button>
                 </div>

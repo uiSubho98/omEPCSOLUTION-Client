@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import usePrinter from "../../hooks/usePrinter";
 import PrinterCart from "./PrinterCart";
-import "../../../style/printerStyle.css";
+// import "../../../style/printerStyle.css";
 import "../../../style/scrollMouse.css";
 import ReactPaginate from "react-paginate";
 
@@ -98,7 +98,7 @@ const Printer = () => {
   const handelFilterApply = () => {
     console.log(printers);
     const NumValue = Number(value);
-    if(NumValue === 0) {
+    if (NumValue === 0) {
       setValue(0);
     }
     if (NumValue > 0 || selectedCheckboxes) {
@@ -136,13 +136,23 @@ const Printer = () => {
     } else if (NumValue <= 0) {
       console.log(value);
       setPrintersFilterList([]);
-    } else if (NumValue <= 0 && selectedCheckboxes ) {
+    } else if (NumValue <= 0 && selectedCheckboxes) {
       setPrintersFilterList([]);
     }
   };
   return (
     <div>
-      <div className="printer-banner bg-fixed">
+      <div
+        className="printer-banner bg-fixed"
+        style={{
+          backgroundImage: `linear-gradient(rgba(12, 110, 134, 0.945), rgba(129, 131, 34, 0.493)), url("https://i.ibb.co/LC1sB6x/printer.jpg")`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          width: "100%",
+          height: "100vh",
+        }}
+      >
         <div className="Heading text-4xl md:text-5xl lg:text-6xl text-white font-mono">
           Our Printers
           <div className="flex text-2xl justify-center mt-2 space-x-2 mb-10">
@@ -221,7 +231,7 @@ const Printer = () => {
       </div>
       {/* Products section area */}
       <section className="w-fit mx-auto grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-20 mb-5 px-14">
-      {printersFilterList.length > 0
+        {printersFilterList.length > 0
           ? displayPrintersFiltered
           : displayPrinters}
       </section>

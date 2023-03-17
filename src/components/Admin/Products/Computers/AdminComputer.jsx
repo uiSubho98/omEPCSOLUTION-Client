@@ -87,7 +87,7 @@ const AdminComputer = () => {
             <div className='flex justify-center mt-2'>
                 {/* <button className='btn'>Add</button> */}
                 {/* The button to open modal */}
-                <div>
+                <div className='z-50'>
                     <label onClick={handelModal} label htmlFor={openModal ? 'addModal' : ''} className="btn">Add Product</label>
 
                     {/* Put this part before </body> tag */}
